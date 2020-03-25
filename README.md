@@ -51,9 +51,9 @@ folder along with labels in **csv** folder. Note that lablels are already availb
 their backup at this stage as otherwise they will be overwritten. 
 In the conda environment run the following script
 ```
-python process_data.py --input_dir ./Dataset --output_dir ./processed_data --output_dir_csv ./csv --val_split_pct 0.1
+python process_data.py --input_dir ./Dataset --output_dir ./processed_data --output_dir_csv ./csv --val_split_pct 0.2
 ```
-On successful completion, a total number of **1,62,787** image files would be created occupying a harddisk space of **~3.06 GB**
+On successful completion, a total number of **1,62,787** image files would be created occupying a harddisk space of **~3.06 GB** with 20% as validation data and 80% as test data
 
 ## Training Classifier on Dataset
 
