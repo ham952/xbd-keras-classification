@@ -172,7 +172,7 @@ def callbacks_func(model_out,start_epoch,plotPath,jsonPath):
                          epsilon = 1e-04,
                          min_lr=0.5e-6,
                          verbose = 1),
-            LearningRateScheduler(lr_schedule)
+            #LearningRateScheduler(lr_schedule)
             ]
     return callbacks
 
@@ -210,7 +210,8 @@ def train_model(train_data, train_csv, test_data, test_csv, model_in,callbacks):
     validation_gen = validation_generator(test_csv, test_data)
 
     #Adds adam optimizer
-    adam = keras.optimizers.Adam(lr=lr_schedule(0),
+    adam = keras.optimizers.Adam(#lr=lr_schedule(0),
+                                    lr=0.001,
                                     beta_1=0.9,
                                     beta_2=0.999,
                                     decay=0.0,
