@@ -53,7 +53,7 @@ In the conda environment run the following script
 ```
 python process_data.py --input_dir ./Dataset --output_dir ./processed_data --output_dir_csv ./csv --val_split_pct 0.2
 ```
-On successful completion, a total number of **1,62,787** image files would be created occupying a harddisk space of **~3.06 GB** with 20% as validation data and 80% as test data
+On successful completion, a total number of **1,62,788** image files would be created occupying a harddisk space of **~3.06 GB** with 20% as validation data and 80% as test data
 
 ## Training Classifier on Dataset
 
@@ -69,3 +69,6 @@ python xview2_training_v5.py --train_data ./processed_data --train_csv ./csv --t
 The model uses different inbuild as well as external callbacks for logging and saving models in **Output** folder. It currently uses Resnet101
 model available in **model** folder. Note that the **output** folder contains a live performance monitoring via an image file. Currently model is
 set to train for only 100 epochs. The idea was to monitor the performance and set the learning rate and other parameters accordingly.
+
+### Additional Note
+Jupyter Colab notebook has been added [here](./Notebook.ipynb). Refer the same for implementation guidance.
