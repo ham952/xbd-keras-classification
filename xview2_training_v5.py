@@ -50,7 +50,7 @@ def validation_generator(test_csv, test_dir):
     df = df.replace({"labels" : damage_intensity_encoding })
 
     gen = keras.preprocessing.image.ImageDataGenerator(
-                             rescale=1.0/255)
+                             rescale=1/255.0)
 
     #todo rescale = 1./255 ? ; original rescale = 1.4
     return gen.flow_from_dataframe(dataframe=df,
@@ -72,7 +72,7 @@ def augment_data(df, in_dir):
                              vertical_flip=True,
                              width_shift_range=0.1,
                              height_shift_range=0.1,
-                             rescale=1.0/255)
+                             rescale=1/255.0)
     print ('[INFO] performing training data augmentation')    
     #todo rescale = 1./255 ? ; original rescale = 1.4
     return gen.flow_from_dataframe(dataframe=df,

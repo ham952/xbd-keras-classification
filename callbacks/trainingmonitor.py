@@ -55,12 +55,11 @@ class TrainingMonitor(BaseLogger):
 			plt.figure()
 			plt.plot(N, self.H["loss"], label="train_loss")
 			plt.plot(N, self.H["val_loss"], label="val_loss")
-			plt.plot(N, self.H["acc"], label="train_acc")
-			plt.plot(N, self.H["val_acc"], label="val_acc")
-			plt.title("Training Loss and Accuracy [Epoch {}]".format(
+
+			plt.title("Training Loss [Epoch {}]".format(
 				len(self.H["loss"])))
 			plt.xlabel("Epoch #")
-			plt.ylabel("Loss/Accuracy")
+			plt.ylabel("Loss")
 			plt.legend()
 
 			# save the figure
@@ -70,11 +69,12 @@ class TrainingMonitor(BaseLogger):
 			plt.figure()
 			plt.plot(N, self.H["f1"], label="f1_train")
 			plt.plot(N, self.H["val_f1"], label="val_f1")
-
-			plt.title("f1 Score [Epoch {}]".format(
+			plt.plot(N, self.H["acc"], label="train_acc")
+			plt.plot(N, self.H["val_acc"], label="val_acc")
+			plt.title("f1 Score  and Accuracy [Epoch {}]".format(
 				len(self.H["loss"])))
 			plt.xlabel("Epoch #")
-			plt.ylabel("f1 Score")
+			plt.ylabel("f1/Accuracy")
 			plt.legend()
 			f1path = self.figPath
 			a = f1path[:-4]
