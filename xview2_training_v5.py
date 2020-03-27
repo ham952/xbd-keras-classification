@@ -165,13 +165,13 @@ def callbacks_func(model_out,start_epoch,plotPath,jsonPath):
             TrainingMonitor(plotPath,
                     jsonPath=jsonPath,
                     startAt=start_epoch),
-            ReduceLROnPlateau(monitor = "val_loss",
-                         factor=np.sqrt(0.1),
-                         cooldown=2,
-                         patience=5,
-                         epsilon = 1e-04,
-                         min_lr=0.5e-6,
-                         verbose = 1),
+            #ReduceLROnPlateau(monitor = "val_loss",
+            #             factor=np.sqrt(0.1),
+             #            cooldown=2,
+              #           patience=5,
+               #          epsilon = 1e-04,
+                #         min_lr=0.5e-6,
+                 #        verbose = 1),
             #LearningRateScheduler(lr_schedule)
             ]
     return callbacks
