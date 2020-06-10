@@ -1,4 +1,4 @@
-# xbd_training
+# xbd-classification-training
 Code preparation for Training xbd dataset for classification task
 
 ## Environment Setup
