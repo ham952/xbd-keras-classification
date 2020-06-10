@@ -72,3 +72,15 @@ set to train for only 100 epochs. The idea was to monitor the performance and se
 
 ### Additional Note
 Jupyter Colab notebook has been added [here](./Notebook.ipynb). Refer the same for implementation guidance.
+
+### Citation Details
+If you find this code useful in your research, please consider citing
+
+	@misc{xbd-classification,
+	author = {{Rafique, Hamza}},
+	title = {Experimenting with xBD classification task for xview2 challenge using Keras},
+	year = {2019},
+	version = {1.0}
+	address = {Air University, ISB. ham952@hotmail.com},
+	url = {https://github.com/ham952/xview2-pytorch-firstrun}
+	} 
